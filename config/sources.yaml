@@ -1,0 +1,478 @@
+mavir:
+
+  # ==========================
+  # AKTUÁLIS VER ADATOK
+  # ==========================
+
+  eromuvi_termeles:
+    chart_id: 4401
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  frekvencia:
+    chart_id: 4444
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  hatarmetszeki_aramlasok:
+    chart_id: 5229
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  import_export:
+    chart_id: 4423
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  rendszer_adatok:
+    chart_id: 10260
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  terv_es_teny_rendszerterhelesek:
+    chart_id: 7678
+    category: aktualis_ver
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  # ==========================
+  # VER NETTÓ FORGALMI ADATOK
+  # ==========================
+
+  frekvencia_adatok:
+    chart_id: 14199
+    category: ver_netto_forgalmi
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 15
+
+    requested_frequency: daily
+
+  napi_csucskihasznaltsagi_oraszam:
+    chart_id: 14160
+    category: ver_netto_forgalmi
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 15
+
+    requested_frequency: daily
+
+  napi_szabadkereskedelmi_villamosenergia_igeny:
+    chart_id: 14143
+    category: ver_netto_forgalmi
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 15
+
+    requested_frequency: daily
+
+  ver_tenyleges_netto_forgalmi_napi_komulalt_adatok:
+    chart_id: 14140
+    category: ver_netto_forgalmi
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 15
+
+    requested_frequency: daily
+
+  ver_tenyleges_netto_forgalmi_negyedoras_adatok:
+    chart_id: 14158
+    category: ver_netto_forgalmi
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  # ==========================
+  # ENERGIA MIX
+  # ==========================
+
+  co2_kibocsatas:
+    chart_id: 1000688
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  co2_kibocsatas_aranya_a_brutto_hazai_eromuvi_termelesben:
+    chart_id: 1000687
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  co2_kibocsatas_aranya_a_brutto_rendszerterhelesben:
+    chart_id: 1000703
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan_hmke_scte_vel:
+    chart_id: 20001
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan:
+    chart_id: 14699
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan:
+    chart_id: 14720
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan_hmke_scte_vel:
+    chart_id: 20002
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan:
+    chart_id: 14719
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan_hmke_scte_vel:
+    chart_id: 20003
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_elszamolasi_meres_alapjan:
+    chart_id: 12058
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_uzemiranyitasi_meres_alapjan:
+    chart_id: 9404
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  hmke_pv_termeles:
+    chart_id: 19240
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  ipari_pv_termeles:
+    chart_id: 11838
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  ipari_szel_termeles:
+    chart_id: 11840
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  megujulo_hazai_brutto_termeles_terv_teny:
+    chart_id: 19960
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  megujulo_termelesi_aranyok_a_brutto_hazai_eromuvi_termelesben:
+    chart_id: 1000684
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  megujulo_termelesi_aranyok_a_brutto_rendszerterhelesben:
+    chart_id: 1000701
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  pv_szumma_halozatra_kiadott:
+    chart_id: 19782
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  pv_szumma_tenylegesen_megtermelt:
+    chart_id: 19600
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  sajat_celu_scte_ipari_pv_termeles:
+    chart_id: 19260
+    category: energia_mix
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  # ==========================
+  # TELJES BRUTTÓ VILLAMOSENERGIA-FELHASZNÁLÁS
+  # ==========================
+
+  brutto_energia_havi:
+    chart_id: 5769
+    category: teljes_brutto_felhasznalas
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: hour
+      period: 24
+
+    requested_frequency: monthly
+
+  brutto_energia_napi:
+    chart_id: 5768
+    category: teljes_brutto_felhasznalas
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: daily
+
+  brutto_energia_eves:
+    chart_id: 5770
+    category: teljes_brutto_felhasznalas
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: hour
+      period: 24
+
+    requested_frequency: yearly
+
+  # ==========================
+  # SZABALYOZASI ADATOK
+  # ==========================
+
+  aktivalas_kiegyenlito_szabalyozas_celjabol_igcc:
+    chart_id: 11326
+    category: szabalyozasi_adatok
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  aktivalas_kiegyenlito_es_nem_kiegyenlito_szabalyozas_celjabol_igcc:
+    chart_id: 11324
+    category: szabalyozasi_adatok
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  aktivalas_nem_kiegyenlito_szabalyozas_celjabol:
+    chart_id: 11322
+    category: szabalyozasi_adatok
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
+  aktivalas_nem_kiegyenlito_szabalyozas_celjabol_reszletes_anonim:
+    chart_id: 11320
+    category: szabalyozasi_adatok
+    enabled: true
+
+    export:
+      type: xlsx
+      period_type: min
+      period: 1
+
+    requested_frequency: minute
+
