@@ -13,26 +13,49 @@ SESSION.headers.update({
 })
 
 
-def get(url, verify_ssl=True, retries=3, wait_seconds=60, **kwargs):
-    for attempt in range(1, retries + 1):
-        response = SESSION.get(
-            url,
-            timeout=60,
-            verify=certifi.where() if verify_ssl else False,
-            **kwargs
-        )
+def get(url, verify_ssl=True, retry_waits=None, **kwargs):
+    if retry_waits is None:
+        retry_waits = [15, 30, 60]
 
-        if response.status_code == 429:
-            print(
-                f"Too many requests. Waiting {wait_seconds} seconds "
-                f"before retry {attempt}/{retries}..."
+    attempts = len(retry_waits) + 1
+
+    for attempt in range(attempts):
+        try:
+            response = SESSION.get(
+                url,
+                timeout=60,
+                verify=certifi.where() if verify_ssl else False,
+                **kwargs
             )
-            time.sleep(wait_seconds)
-            continue
 
-        response.raise_for_status()
-        return response
+            if response.status_code == 429:
+                if attempt >= len(retry_waits):
+                    response.raise_for_status()
 
-    raise RuntimeError(
-        f"Too many requests after {retries} retries: {url}"
-    )
+                wait_time = retry_waits[attempt]
+
+                print(
+                    f"Too many requests. Waiting {wait_time} seconds "
+                    f"before retry {attempt + 1}/{len(retry_waits)}..."
+                )
+
+                time.sleep(wait_time)
+                continue
+
+            response.raise_for_status()
+            return response
+
+        except requests.exceptions.ConnectionError as error:
+            if attempt >= len(retry_waits):
+                raise
+
+            wait_time = retry_waits[attempt]
+
+            print(
+                f"Connection error. Waiting {wait_time} seconds "
+                f"before retry {attempt + 1}/{len(retry_waits)}..."
+            )
+
+            time.sleep(wait_time)
+
+    raise RuntimeError(f"Request failed after retries: {url}")
