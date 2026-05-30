@@ -15,7 +15,7 @@ SESSION.headers.update({
 
 def get(url, verify_ssl=True, retry_waits=None, **kwargs):
     if retry_waits is None:
-        retry_waits = [15, 30, 60]
+        retry_waits = [60, 60, 60, 600]
 
     attempts = len(retry_waits) + 1
 

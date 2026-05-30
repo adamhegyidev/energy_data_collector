@@ -2,11 +2,9 @@ from pathlib import Path
 
 import yaml
 
-
 CONFIG_DIR = Path(
     "config"
 )
-
 
 def load_yaml(filename):
 
@@ -20,13 +18,11 @@ def load_yaml(filename):
 
         return yaml.safe_load(file)
 
-
 def load_sources():
 
     return load_yaml(
         "sources.yaml"
     )
-
 
 def get_mavir_sources():
 
@@ -36,3 +32,11 @@ def get_mavir_sources():
         "mavir",
         {}
     )
+
+def get_copernicus_sources():
+    config = load_sources()
+
+    return config.get(
+        "copernicus",
+        {}
+    )    

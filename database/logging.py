@@ -15,6 +15,9 @@ def log_download(
     start_date,
     end_date,
     status,
+    category=None,
+    requested_frequency=None,
+    actual_frequency=None,
     file_path=None,
     error_message=None,
 ):
@@ -23,20 +26,26 @@ def log_download(
             """
             INSERT INTO downloads (
                 source,
+                category,
                 dataset,
                 start_date,
                 end_date,
+                requested_frequency,
+                actual_frequency,
                 file_path,
                 status,
                 error_message
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 source,
+                category,
                 dataset,
                 str(start_date),
                 str(end_date),
+                requested_frequency,
+                actual_frequency,
                 str(file_path) if file_path else None,
                 status,
                 error_message,

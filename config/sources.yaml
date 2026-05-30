@@ -476,3 +476,66 @@ mavir:
 
     requested_frequency: minute
 
+copernicus:
+
+  era5_hungary_points:
+    enabled: true
+    dataset: reanalysis-era5-single-levels-timeseries
+
+    format:
+      data_format: netcdf
+      download_format: unarchived
+
+    locations:
+
+      budapest:
+        latitude: 47.4979
+        longitude: 19.0402
+
+      gyor:
+        latitude: 47.6875
+        longitude: 17.6504
+
+      szombathely:
+        latitude: 47.2307
+        longitude: 16.6218
+
+      pecs:
+        latitude: 46.0727
+        longitude: 18.2323
+
+      szeged:
+        latitude: 46.2530
+        longitude: 20.1414
+
+      debrecen:
+        latitude: 47.5316
+        longitude: 21.6273
+
+      miskolc:
+        latitude: 48.1035
+        longitude: 20.7784
+
+      nyiregyhaza:
+        latitude: 47.9554
+        longitude: 21.7167
+
+      paks:
+        latitude: 46.6229
+        longitude: 18.8557
+
+    variables:
+      - 2m_temperature
+      - 2m_dewpoint_temperature
+      - surface_solar_radiation_downwards
+      - surface_net_solar_radiation
+      - total_cloud_cover
+      - 10m_u_component_of_wind
+      - 10m_v_component_of_wind
+      - 100m_u_component_of_wind
+      - 100m_v_component_of_wind
+      - total_precipitation
+      - snowfall
+      - snow_depth
+      - surface_pressure
+      - mean_sea_level_pressure

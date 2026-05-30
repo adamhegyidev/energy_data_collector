@@ -71,3 +71,11 @@ The framework supports heterogeneous data acquisition, historical reconstruction
 ## Project status
 
 Early-stage development.
+
+
+Meteorological data source:
+Copernicus Climate Change Service (C3S), ERA5 reanalysis.
+Data used under CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+
+Meteorological variables were obtained from the Copernicus Climate Change Service ERA5 reanalysis dataset.
