@@ -4,6 +4,7 @@ __pycache__/
 
 data/raw/
 data/db/
+data/processed/
 
 .env
 
