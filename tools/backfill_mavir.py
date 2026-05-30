@@ -9,6 +9,10 @@ from collectors.mavir import download_chart
 from database.logging import init_db, log_download
 from utils.config import get_mavir_sources
 
+from processors.mavir import (
+    xlsx_to_dataframe,
+    save_parquet,
+)
 
 def to_millis(dt):
     return int(dt.timestamp() * 1000)
@@ -254,6 +258,27 @@ def main():
                 )
 
                 print(f"  Saved: {file_path}")
+                
+                df = xlsx_to_dataframe(
+                    file_path,
+                    dataset=dataset,
+                )
+
+                parquet_file = (
+                    Path("data")
+                    / "processed"
+                    / "mavir"
+                    / dataset
+                    / str(year)
+                    / f"{year}-{month:02d}.parquet"
+                )
+
+                save_parquet(
+                    df,
+                    parquet_file,
+                )
+
+                print(f"  Processed: {parquet_file}")
 
             except Exception as error:
                 log_download(

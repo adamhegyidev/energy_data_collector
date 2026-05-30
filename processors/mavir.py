@@ -1,7 +1,13 @@
 from pathlib import Path
 
+import warnings
+
 import pandas as pd
 
+warnings.filterwarnings(
+    "ignore",
+    message="Workbook contains no default style.*"
+)
 
 def xlsx_to_dataframe(
     xlsx_file,
@@ -18,16 +24,35 @@ def xlsx_to_dataframe(
             "Missing 'Időpont' column"
         )
 
-    timestamp = pd.to_datetime(
-        df["Időpont"]
+    timestamp_utc = pd.to_datetime(
+        df["Időpont"],
+        utc=True,
     )
 
-    df["timestamp_utc"] = (
-        timestamp.dt.tz_convert("UTC")
+    timestamp_local = timestamp_utc.dt.tz_convert(
+        "Europe/Budapest"
     )
+
+    df["timestamp_utc"] = timestamp_utc
+    df["timestamp_local"] = timestamp_local
 
     df.drop(
         columns=["Időpont"],
+        inplace=True,
+    )
+
+    data_columns = [
+        column
+        for column in df.columns
+        if column not in [
+            "timestamp_utc",
+            "timestamp_local",
+        ]
+    ]
+
+    df.dropna(
+        subset=data_columns,
+        how="all",
         inplace=True,
     )
 
@@ -39,6 +64,12 @@ def xlsx_to_dataframe(
 
     df.insert(
         1,
+        "timestamp_local",
+        df.pop("timestamp_local"),
+    )
+
+    df.insert(
+        2,
         "dataset",
         dataset,
     )
