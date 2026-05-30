@@ -26,13 +26,24 @@ def netcdf_to_dataframe(
         utc=True,
     )
 
+    df["timestamp_local"] = (
+        df["timestamp_utc"]
+        .dt.tz_convert("Europe/Budapest")
+    )
+
+    df.insert(
+        1,
+        "timestamp_local",
+        df.pop("timestamp_local"),
+    )
+
     if location:
         df.insert(
-            1,
+            2,
             "location",
             location,
         )
-
+        
     return df
 
 

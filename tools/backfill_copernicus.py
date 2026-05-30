@@ -1,5 +1,5 @@
 import argparse
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from collectors.copernicus import download_era5_point
@@ -34,6 +34,12 @@ def parse_args():
         "--location",
         default=None,
         help="Location name from config (default: all locations)",
+    )
+
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Overwrite existing raw and processed files",
     )
 
     return parser.parse_args()
@@ -71,22 +77,17 @@ def next_month(year, month):
 
 
 def month_date_range(year, month):
-    start_date = date(
-        year,
-        month,
-        1,
-    )
+    start_date = date(year, month, 1)
 
-    next_year, next_month_value = next_month(
-        year,
-        month,
-    )
+    next_year, next_month_value = next_month(year, month)
 
-    end_date = date(
+    next_month_start = date(
         next_year,
         next_month_value,
         1,
     )
+
+    end_date = next_month_start - timedelta(days=1)
 
     return (
         start_date.isoformat(),
@@ -134,11 +135,9 @@ def main():
                 / str(year)
                 / f"{year}-{month:02d}.parquet"
             )
-
-            if parquet_file.exists():
+            if parquet_file.exists() and not args.overwrite:
                 print(
-                    f"Skipping {location_name} "
-                    f"{year}-{month:02d}"
+                    f"Skipping existing: {parquet_file}"
                 )
                 continue
 
@@ -182,7 +181,6 @@ def main():
                 df = netcdf_to_dataframe(
                     nc_file,
                     location=location_name,
-                    dataset=source_name,
                 )
 
                 save_parquet(
