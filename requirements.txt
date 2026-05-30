@@ -1,14 +1,18 @@
 attrs==26.1.0
 cdsapi==0.7.7
 certifi==2026.5.20
+cftime==1.6.5
 charset-normalizer==3.4.7
 ecmwf-datastores-client==0.5.1
 et_xmlfile==2.0.0
 idna==3.16
 multiurl==0.3.7
+netCDF4==1.7.4
 numpy==2.4.6
 openpyxl==3.1.5
+packaging==26.2
 pandas==3.0.3
+pyarrow==24.0.0
 python-dateutil==2.9.0.post0
 pytz==2026.2
 PyYAML==6.0.3
@@ -18,3 +22,4 @@ tqdm==4.67.3
 typing_extensions==4.15.0
 tzdata==2026.2
 urllib3==2.7.0
+xarray==2026.4.0

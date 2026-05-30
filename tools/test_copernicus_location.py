@@ -23,9 +23,14 @@ def main():
         / "2024-01.nc"
     )
 
-    output_file.parent.mkdir(
-        parents=True,
-        exist_ok=True,
+    output_file = (
+        Path("data")
+        / "raw"
+        / "copernicus"
+        / "era5_hungary_points"
+        / location_name
+        / "2024"
+        / "2024-01.nc"
     )
 
     download_era5_point(
@@ -39,7 +44,8 @@ def main():
         data_format=source["format"]["data_format"],
     )
 
-    print(f"Saved: {output_file}")
+    saved_file = download_era5_point(...)
+    print(f"Saved: {saved_file}")
 
 
 if __name__ == "__main__":

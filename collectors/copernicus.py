@@ -1,3 +1,4 @@
+import shutil
 import zipfile
 from pathlib import Path
 
@@ -17,7 +18,6 @@ def download_era5_point(
     output_file = Path(output_file)
 
     zip_file = output_file.with_suffix(".zip")
-    extract_dir = output_file.parent / "extracted"
 
     client = cdsapi.Client()
 
@@ -44,21 +44,19 @@ def download_era5_point(
         str(zip_file),
     )
 
-    extract_dir.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
     with zipfile.ZipFile(zip_file, "r") as zip_ref:
-        zip_ref.extractall(extract_dir)
+        nc_files = [
+            name for name in zip_ref.namelist()
+            if name.endswith(".nc")
+        ]
 
-    extracted_files = list(
-        extract_dir.glob("*.nc")
-    )
+        if not nc_files:
+            raise FileNotFoundError(
+                f"No NetCDF file found in {zip_file}"
+            )
 
-    if not extracted_files:
-        raise FileNotFoundError(
-            f"No NetCDF file found in {extract_dir}"
-        )
+        with zip_ref.open(nc_files[0]) as source:
+            with open(output_file, "wb") as target:
+                shutil.copyfileobj(source, target)
 
-    return extracted_files[0]
+    return output_file
