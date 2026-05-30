@@ -6,6 +6,12 @@ data/raw/
 data/db/
 data/processed/
 
+data/
+*.parquet
+*.xlsx
+*.nc
+*.zip
+
 .env
 
 .idea/
