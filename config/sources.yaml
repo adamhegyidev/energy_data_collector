@@ -1,541 +1,599 @@
 mavir:
-
-  # ==========================
-  # AKTUÁLIS VER ADATOK
-  # ==========================
-
   eromuvi_termeles:
     chart_id: 4401
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Erőművi termelés
+      group: Aktuális VER
+      description: Erőművi termelés
+      columns: {}
   frekvencia:
     chart_id: 4444
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Hálózati frekvencia
+      group: Aktuális VER
+      description: Hálózati frekvencia
+      columns: {}
   hatarmetszeki_aramlasok:
     chart_id: 5229
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Határmetszéki áramlások
+      group: Aktuális VER
+      description: Határmetszéki áramlások
+      columns: {}
   import_export:
     chart_id: 4423
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Import / export
+      group: Aktuális VER
+      description: Import / export
+      columns: {}
   rendszer_adatok:
     chart_id: 10260
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Rendszeradatok
+      group: Aktuális VER
+      description: Rendszeradatok
+      columns: {}
   terv_es_teny_rendszerterhelesek:
     chart_id: 7678
     category: aktualis_ver
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  # ==========================
-  # VER NETTÓ FORGALMI ADATOK
-  # ==========================
-
+    display:
+      name: Terv és tény rendszerterhelések
+      group: Aktuális VER
+      description: Terv és tény rendszerterhelések
+      columns: {}
   frekvencia_adatok:
     chart_id: 14199
     category: ver_netto_forgalmi
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 15
-
     requested_frequency: daily
-
+    display:
+      name: Frekvencia adatok
+      group: VER nettó forgalmi adatok
+      description: Frekvencia adatok
+      columns: {}
   napi_csucskihasznaltsagi_oraszam:
     chart_id: 14160
     category: ver_netto_forgalmi
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 15
-
     requested_frequency: daily
-
+    display:
+      name: Napi csúcskihasználtsági óraszám
+      group: VER nettó forgalmi adatok
+      description: Napi csúcskihasználtsági óraszám
+      columns: {}
   napi_szabadkereskedelmi_villamosenergia_igeny:
     chart_id: 14143
     category: ver_netto_forgalmi
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 15
-
     requested_frequency: daily
-
+    display:
+      name: Napi szabadkereskedelmi villamosenergia-igény
+      group: VER nettó forgalmi adatok
+      description: Napi szabadkereskedelmi villamosenergia-igény
+      columns: {}
   ver_tenyleges_netto_forgalmi_napi_komulalt_adatok:
     chart_id: 14140
     category: ver_netto_forgalmi
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 15
-
     requested_frequency: daily
-
+    display:
+      name: VER tényleges nettó forgalmi napi kumulált adatok
+      group: VER nettó forgalmi adatok
+      description: VER tényleges nettó forgalmi napi kumulált adatok
+      columns: {}
   ver_tenyleges_netto_forgalmi_negyedoras_adatok:
     chart_id: 14158
     category: ver_netto_forgalmi
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  # ==========================
-  # ENERGIA MIX
-  # ==========================
-
+    display:
+      name: VER tényleges nettó forgalmi negyedórás adatok
+      group: VER nettó forgalmi adatok
+      description: VER tényleges nettó forgalmi negyedórás adatok
+      columns: {}
   co2_kibocsatas:
     chart_id: 1000688
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: CO₂ kibocsátás
+      group: Energia mix
+      description: CO₂ kibocsátás
+      columns: {}
   co2_kibocsatas_aranya_a_brutto_hazai_eromuvi_termelesben:
     chart_id: 1000687
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: CO₂ kibocsátás aránya a bruttó hazai erőművi termelésben
+      group: Energia mix
+      description: CO₂ kibocsátás aránya a bruttó hazai erőművi termelésben
+      columns: {}
   co2_kibocsatas_aranya_a_brutto_rendszerterhelesben:
     chart_id: 1000703
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan_hmke_scte_vel:
-    chart_id: 20001
+    display:
+      name: CO₂ kibocsátás aránya a bruttó rendszerterhelésben
+      group: Energia mix
+      description: CO₂ kibocsátás aránya a bruttó rendszerterhelésben
+      columns: {}
+  ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan_hmke_scte_vel
+  : chart_id: 20001
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
+        szaldo brutto uzemiranyitasi meres alapjan hmke scte vel
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
+        export szaldo brutto uzemiranyitasi meres alapjan hmke scte vel
+      columns: {}
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan:
     chart_id: 14699
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
+        szaldo brutto uzemiranyitasi meres alapjan
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
+        export szaldo brutto uzemiranyitasi meres alapjan
+      columns: {}
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan:
     chart_id: 14720
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan_hmke_scte_vel:
-    chart_id: 20002
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
+        szaldo netto uzemiranyitasi meres alapjan
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
+        export szaldo netto uzemiranyitasi meres alapjan
+      columns: {}
+  ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan_hmke_scte_vel
+  : chart_id: 20002
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
+        szaldo netto uzemiranyitasi meres alapjan hmke scte vel
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
+        export szaldo netto uzemiranyitasi meres alapjan hmke scte vel
+      columns: {}
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan:
     chart_id: 14719
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan_hmke_scte_vel:
-    chart_id: 20003
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export
+        szaldo netto elszamolasi meres alapjan
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import
+        export szaldo netto elszamolasi meres alapjan
+      columns: {}
+  ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan_hmke_scte_vel
+  : chart_id: 20003
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export
+        szaldo netto elszamolasi meres alapjan hmke scte vel
+      group: Energia mix
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import
+        export szaldo netto elszamolasi meres alapjan hmke scte vel
+      columns: {}
   eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_elszamolasi_meres_alapjan:
     chart_id: 12058
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi meres
+        alapjan
+      group: Energia mix
+      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi
+        meres alapjan
+      columns: {}
   eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_uzemiranyitasi_meres_alapjan:
     chart_id: 9404
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi meres
+        alapjan
+      group: Energia mix
+      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi
+        meres alapjan
+      columns: {}
   hmke_pv_termeles:
     chart_id: 19240
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: HMKE PV termelés
+      group: Energia mix
+      description: HMKE PV termelés
+      columns: {}
   ipari_pv_termeles:
     chart_id: 11838
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Ipari PV termelés
+      group: Energia mix
+      description: Ipari PV termelés
+      columns: {}
   ipari_szel_termeles:
     chart_id: 11840
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Ipari széltermelés
+      group: Energia mix
+      description: Ipari széltermelés
+      columns: {}
   megujulo_hazai_brutto_termeles_terv_teny:
     chart_id: 19960
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Megújuló hazai bruttó termelés terv/tény
+      group: Energia mix
+      description: Megújuló hazai bruttó termelés terv/tény
+      columns: {}
   megujulo_termelesi_aranyok_a_brutto_hazai_eromuvi_termelesben:
     chart_id: 1000684
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Megújuló termelési arányok a bruttó hazai erőművi termelésben
+      group: Energia mix
+      description: Megújuló termelési arányok a bruttó hazai erőművi termelésben
+      columns: {}
   megujulo_termelesi_aranyok_a_brutto_rendszerterhelesben:
     chart_id: 1000701
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Megújuló termelési arányok a bruttó rendszerterhelésben
+      group: Energia mix
+      description: Megújuló termelési arányok a bruttó rendszerterhelésben
+      columns: {}
   pv_szumma_halozatra_kiadott:
     chart_id: 19782
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: PV szumma hálózatra kiadott
+      group: Energia mix
+      description: PV szumma hálózatra kiadott
+      columns: {}
   pv_szumma_tenylegesen_megtermelt:
     chart_id: 19600
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: PV szumma ténylegesen megtermelt
+      group: Energia mix
+      description: PV szumma ténylegesen megtermelt
+      columns: {}
   sajat_celu_scte_ipari_pv_termeles:
     chart_id: 19260
     category: energia_mix
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
-  # ==========================
-  # TELJES BRUTTÓ VILLAMOSENERGIA-FELHASZNÁLÁS
-  # ==========================
-
+    display:
+      name: Saját célú SCTE ipari PV termelés
+      group: Energia mix
+      description: Saját célú SCTE ipari PV termelés
+      columns: {}
   brutto_energia_havi:
     chart_id: 5769
     category: teljes_brutto_felhasznalas
     enabled: true
-
     export:
       type: xlsx
       period_type: hour
       period: 24
-
     requested_frequency: monthly
-
+    display:
+      name: Bruttó energia havi
+      group: Teljes bruttó villamosenergia-felhasználás
+      description: Bruttó energia havi
+      columns: {}
   brutto_energia_napi:
     chart_id: 5768
     category: teljes_brutto_felhasznalas
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: daily
-
+    display:
+      name: Bruttó energia napi
+      group: Teljes bruttó villamosenergia-felhasználás
+      description: Bruttó energia napi
+      columns: {}
   brutto_energia_eves:
     chart_id: 5770
     category: teljes_brutto_felhasznalas
     enabled: true
-
     export:
       type: xlsx
       period_type: hour
       period: 24
-
     requested_frequency: yearly
-
-  # ==========================
-  # SZABALYOZASI ADATOK
-  # ==========================
-
+    display:
+      name: Bruttó energia éves
+      group: Teljes bruttó villamosenergia-felhasználás
+      description: Bruttó energia éves
+      columns: {}
   aktivalas_kiegyenlito_szabalyozas_celjabol_igcc:
     chart_id: 11326
     category: szabalyozasi_adatok
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Aktiválás kiegyenlítő szabályozás céljából IGCC
+      group: Szabályozási adatok
+      description: Aktiválás kiegyenlítő szabályozás céljából IGCC
+      columns: {}
   aktivalas_kiegyenlito_es_nem_kiegyenlito_szabalyozas_celjabol_igcc:
     chart_id: 11324
     category: szabalyozasi_adatok
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Aktiválás kiegyenlítő és nem kiegyenlítő szabályozás céljából IGCC
+      group: Szabályozási adatok
+      description: Aktiválás kiegyenlítő és nem kiegyenlítő szabályozás céljából IGCC
+      columns: {}
   aktivalas_nem_kiegyenlito_szabalyozas_celjabol:
     chart_id: 11322
     category: szabalyozasi_adatok
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Aktiválás nem kiegyenlítő szabályozás céljából
+      group: Szabályozási adatok
+      description: Aktiválás nem kiegyenlítő szabályozás céljából
+      columns: {}
   aktivalas_nem_kiegyenlito_szabalyozas_celjabol_reszletes_anonim:
     chart_id: 11320
     category: szabalyozasi_adatok
     enabled: true
-
     export:
       type: xlsx
       period_type: min
       period: 1
-
     requested_frequency: minute
-
+    display:
+      name: Aktiválás nem kiegyenlítő szabályozás céljából, részletes anonim
+      group: Szabályozási adatok
+      description: Aktiválás nem kiegyenlítő szabályozás céljából, részletes anonim
+      columns: {}
 copernicus:
-
   era5_hungary_points:
     enabled: true
     dataset: reanalysis-era5-single-levels-timeseries
-
     format:
       data_format: netcdf
       download_format: unarchived
-
     locations:
-
       budapest:
         latitude: 47.4979
         longitude: 19.0402
-
       gyor:
         latitude: 47.6875
         longitude: 17.6504
-
       szombathely:
         latitude: 47.2307
         longitude: 16.6218
-
       pecs:
         latitude: 46.0727
         longitude: 18.2323
-
       szeged:
-        latitude: 46.2530
+        latitude: 46.253
         longitude: 20.1414
-
       debrecen:
         latitude: 47.5316
         longitude: 21.6273
-
       miskolc:
         latitude: 48.1035
         longitude: 20.7784
-
       nyiregyhaza:
         latitude: 47.9554
         longitude: 21.7167
-
       paks:
         latitude: 46.6229
         longitude: 18.8557
-
     variables:
-      - 2m_temperature
-      - 2m_dewpoint_temperature
-      - surface_solar_radiation_downwards
-      - surface_net_solar_radiation
-      - total_cloud_cover
-      - 10m_u_component_of_wind
-      - 10m_v_component_of_wind
-      - 100m_u_component_of_wind
-      - 100m_v_component_of_wind
-      - total_precipitation
-      - snowfall
-      - snow_depth
-      - surface_pressure
-      - mean_sea_level_pressure
+    - 2m_temperature
+    - 2m_dewpoint_temperature
+    - surface_solar_radiation_downwards
+    - surface_net_solar_radiation
+    - total_cloud_cover
+    - 10m_u_component_of_wind
+    - 10m_v_component_of_wind
+    - 100m_u_component_of_wind
+    - 100m_v_component_of_wind
+    - total_precipitation
+    - snowfall
+    - snow_depth
+    - surface_pressure
+    - mean_sea_level_pressure
