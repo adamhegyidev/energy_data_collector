@@ -11,26 +11,20 @@ def download_chart(
     chart_id,
     from_time,
     to_time,
+    period_type="min",
     period=15,
 ):
-
     url = (
         f"{BASE_URL}"
         f"/chart/{chart_id}/export"
     )
 
     params = {
-
         "exportType": "xlsx",
-
         "fromTime": from_time,
-
         "toTime": to_time,
-
-        "periodType": "min",
-
-        "period": period
-
+        "periodType": period_type,
+        "period": period,
     }
 
     # MAVIR SSL certificate rosszul van konfigurálva, ezért itt letiltjuk a SSL ellenőrzést.
@@ -39,7 +33,7 @@ def download_chart(
     response = get(
         url,
         params=params,
-        verify_ssl=False
+        verify_ssl=False,
     )
 
     return response.content

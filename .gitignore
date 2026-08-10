@@ -1,20 +1,31 @@
+# Virtual environment
 venv/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-data/raw/
-data/db/
-data/processed/
+# Environment / secrets
+.env
+.env.*
 
+# Generated data
 data/
+logs/
+
+# Data files
 *.parquet
 *.xlsx
 *.nc
 *.zip
+*.sqlite
 
-.env
-
+# IDE
 .idea/
 .vscode/
 
-*.sqlite
+# OS
+.DS_Store
+Thumbs.db

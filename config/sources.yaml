@@ -13,6 +13,7 @@ mavir:
       group: Aktuális VER
       description: Erőművi termelés
       columns: {}
+      unit: MW
   frekvencia:
     chart_id: 4444
     category: aktualis_ver
@@ -27,6 +28,7 @@ mavir:
       group: Aktuális VER
       description: Hálózati frekvencia
       columns: {}
+      unit: Hz
   hatarmetszeki_aramlasok:
     chart_id: 5229
     category: aktualis_ver
@@ -41,6 +43,7 @@ mavir:
       group: Aktuális VER
       description: Határmetszéki áramlások
       columns: {}
+      unit: MW
   import_export:
     chart_id: 4423
     category: aktualis_ver
@@ -55,6 +58,7 @@ mavir:
       group: Aktuális VER
       description: Import / export
       columns: {}
+      unit: MW
   rendszer_adatok:
     chart_id: 10260
     category: aktualis_ver
@@ -83,6 +87,7 @@ mavir:
       group: Aktuális VER
       description: Terv és tény rendszerterhelések
       columns: {}
+      unit: MW
   frekvencia_adatok:
     chart_id: 14199
     category: ver_netto_forgalmi
@@ -97,6 +102,7 @@ mavir:
       group: VER nettó forgalmi adatok
       description: Frekvencia adatok
       columns: {}
+      unit: Hz
   napi_csucskihasznaltsagi_oraszam:
     chart_id: 14160
     category: ver_netto_forgalmi
@@ -111,6 +117,7 @@ mavir:
       group: VER nettó forgalmi adatok
       description: Napi csúcskihasználtsági óraszám
       columns: {}
+      unit: h
   napi_szabadkereskedelmi_villamosenergia_igeny:
     chart_id: 14143
     category: ver_netto_forgalmi
@@ -181,6 +188,7 @@ mavir:
       group: Energia mix
       description: CO₂ kibocsátás aránya a bruttó hazai erőművi termelésben
       columns: {}
+      unit: '%'
   co2_kibocsatas_aranya_a_brutto_rendszerterhelesben:
     chart_id: 1000703
     category: energia_mix
@@ -195,6 +203,7 @@ mavir:
       group: Energia mix
       description: CO₂ kibocsátás aránya a bruttó rendszerterhelésben
       columns: {}
+      unit: '%'
   ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan_hmke_scte_vel
   : chart_id: 20001
     category: energia_mix
@@ -205,12 +214,13 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
-        szaldo brutto uzemiranyitasi meres alapjan hmke scte vel
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo brutto uzemiranyitasi meres alapjan
+        hmke scte vel
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
-        export szaldo brutto uzemiranyitasi meres alapjan hmke scte vel
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo brutto uzemiranyitasi
+        meres alapjan hmke scte vel
       columns: {}
+      unit: MW
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_brutto_uzemiranyitasi_meres_alapjan:
     chart_id: 14699
     category: energia_mix
@@ -221,12 +231,12 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
-        szaldo brutto uzemiranyitasi meres alapjan
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo brutto uzemiranyitasi meres alapjan
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
-        export szaldo brutto uzemiranyitasi meres alapjan
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo brutto uzemiranyitasi
+        meres alapjan
       columns: {}
+      unit: MW
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan:
     chart_id: 14720
     category: energia_mix
@@ -237,12 +247,12 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
-        szaldo netto uzemiranyitasi meres alapjan
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo netto uzemiranyitasi meres alapjan
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
-        export szaldo netto uzemiranyitasi meres alapjan
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo netto uzemiranyitasi meres
+        alapjan
       columns: {}
+      unit: MW
   ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_az_import_export_szaldo_netto_uzemiranyitasi_meres_alapjan_hmke_scte_vel
   : chart_id: 20002
     category: energia_mix
@@ -253,12 +263,13 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export
-        szaldo netto uzemiranyitasi meres alapjan hmke scte vel
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo netto uzemiranyitasi meres alapjan
+        hmke scte vel
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import
-        export szaldo netto uzemiranyitasi meres alapjan hmke scte vel
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es az import export szaldo netto uzemiranyitasi meres
+        alapjan hmke scte vel
       columns: {}
+      unit: MW
   eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan:
     chart_id: 14719
     category: energia_mix
@@ -269,12 +280,11 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export
-        szaldo netto elszamolasi meres alapjan
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export szaldo netto elszamolasi meres alapjan
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import
-        export szaldo netto elszamolasi meres alapjan
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import export szaldo netto elszamolasi meres alapjan
       columns: {}
+      unit: MW
   ? eromuvei_termeles_primer_forrasok_szerinti_megoszlasa_es_import_export_szaldo_netto_elszamolasi_meres_alapjan_hmke_scte_vel
   : chart_id: 20003
     category: energia_mix
@@ -285,12 +295,13 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export
-        szaldo netto elszamolasi meres alapjan hmke scte vel
+      name: Eromuvei termeles primer forrasok szerinti megoszlasa es import export szaldo netto elszamolasi meres alapjan
+        hmke scte vel
       group: Energia mix
-      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import
-        export szaldo netto elszamolasi meres alapjan hmke scte vel
+      description: Eromuvei termeles primer forrasok szerinti megoszlasa es import export szaldo netto elszamolasi meres alapjan
+        hmke scte vel
       columns: {}
+      unit: MW
   eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_elszamolasi_meres_alapjan:
     chart_id: 12058
     category: energia_mix
@@ -301,12 +312,11 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi meres
-        alapjan
+      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi meres alapjan
       group: Energia mix
-      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi
-        meres alapjan
+      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto elszamolasi meres alapjan
       columns: {}
+      unit: MW
   eromuvi_termeles_tuzeloanyag_szerinti_bontasban_netto_uzemiranyitasi_meres_alapjan:
     chart_id: 9404
     category: energia_mix
@@ -317,12 +327,11 @@ mavir:
       period: 1
     requested_frequency: minute
     display:
-      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi meres
-        alapjan
+      name: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi meres alapjan
       group: Energia mix
-      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi
-        meres alapjan
+      description: Eromuvi termeles tuzeloanyag szerinti bontasban netto uzemiranyitasi meres alapjan
       columns: {}
+      unit: MW
   hmke_pv_termeles:
     chart_id: 19240
     category: energia_mix
@@ -337,6 +346,7 @@ mavir:
       group: Energia mix
       description: HMKE PV termelés
       columns: {}
+      unit: MW
   ipari_pv_termeles:
     chart_id: 11838
     category: energia_mix
@@ -351,6 +361,7 @@ mavir:
       group: Energia mix
       description: Ipari PV termelés
       columns: {}
+      unit: MW
   ipari_szel_termeles:
     chart_id: 11840
     category: energia_mix
@@ -365,6 +376,7 @@ mavir:
       group: Energia mix
       description: Ipari széltermelés
       columns: {}
+      unit: MW
   megujulo_hazai_brutto_termeles_terv_teny:
     chart_id: 19960
     category: energia_mix
@@ -379,6 +391,7 @@ mavir:
       group: Energia mix
       description: Megújuló hazai bruttó termelés terv/tény
       columns: {}
+      unit: MW
   megujulo_termelesi_aranyok_a_brutto_hazai_eromuvi_termelesben:
     chart_id: 1000684
     category: energia_mix
@@ -393,6 +406,7 @@ mavir:
       group: Energia mix
       description: Megújuló termelési arányok a bruttó hazai erőművi termelésben
       columns: {}
+      unit: '%'
   megujulo_termelesi_aranyok_a_brutto_rendszerterhelesben:
     chart_id: 1000701
     category: energia_mix
@@ -407,6 +421,7 @@ mavir:
       group: Energia mix
       description: Megújuló termelési arányok a bruttó rendszerterhelésben
       columns: {}
+      unit: '%'
   pv_szumma_halozatra_kiadott:
     chart_id: 19782
     category: energia_mix
@@ -421,6 +436,7 @@ mavir:
       group: Energia mix
       description: PV szumma hálózatra kiadott
       columns: {}
+      unit: MW
   pv_szumma_tenylegesen_megtermelt:
     chart_id: 19600
     category: energia_mix
@@ -435,6 +451,7 @@ mavir:
       group: Energia mix
       description: PV szumma ténylegesen megtermelt
       columns: {}
+      unit: MW
   sajat_celu_scte_ipari_pv_termeles:
     chart_id: 19260
     category: energia_mix
@@ -449,6 +466,7 @@ mavir:
       group: Energia mix
       description: Saját célú SCTE ipari PV termelés
       columns: {}
+      unit: MW
   brutto_energia_havi:
     chart_id: 5769
     category: teljes_brutto_felhasznalas
@@ -505,6 +523,7 @@ mavir:
       group: Szabályozási adatok
       description: Aktiválás kiegyenlítő szabályozás céljából IGCC
       columns: {}
+      unit: MW
   aktivalas_kiegyenlito_es_nem_kiegyenlito_szabalyozas_celjabol_igcc:
     chart_id: 11324
     category: szabalyozasi_adatok
@@ -519,6 +538,7 @@ mavir:
       group: Szabályozási adatok
       description: Aktiválás kiegyenlítő és nem kiegyenlítő szabályozás céljából IGCC
       columns: {}
+      unit: MW
   aktivalas_nem_kiegyenlito_szabalyozas_celjabol:
     chart_id: 11322
     category: szabalyozasi_adatok
@@ -533,6 +553,7 @@ mavir:
       group: Szabályozási adatok
       description: Aktiválás nem kiegyenlítő szabályozás céljából
       columns: {}
+      unit: MW
   aktivalas_nem_kiegyenlito_szabalyozas_celjabol_reszletes_anonim:
     chart_id: 11320
     category: szabalyozasi_adatok
@@ -547,6 +568,7 @@ mavir:
       group: Szabályozási adatok
       description: Aktiválás nem kiegyenlítő szabályozás céljából, részletes anonim
       columns: {}
+      unit: MW
 copernicus:
   era5_hungary_points:
     enabled: true
